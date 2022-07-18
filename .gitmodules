@@ -1,0 +1,3 @@
+[submodule "Spicy/vendor/spdlog"]
+	path = Spicy/vendor/spdlog
+	url = https://github.com/gabime/spdlog
