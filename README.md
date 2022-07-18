@@ -5,5 +5,5 @@ Learning to make a new Game Engine.
 ---
 ### Libraries used
 ```
-
+* [gabime/spdlog]
 ```
