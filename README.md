@@ -6,3 +6,4 @@ Learning to make a new Game Engine.
 ### Libraries used
 * Github Repos:
   - Speed Log : [Gabime/spdlog](https://github.com/gabime/spdlog)
+  - Premake : [Premake](https://github.com/premake/premake-core)
