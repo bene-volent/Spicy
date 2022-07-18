@@ -24,6 +24,9 @@ namespace Spicy
 	};
 }
 
+
+#if defined (SPC_DEBUG)|| defined (SPC_RELEASE)
+// FOR DEBUG OR RELEASE CONFIGURATION
 // Core Log Macros
 
 #define SPC_CORE_ERROR(...)	Spicy::Log::GetCoreLogger()->error(__VA_ARGS__)
@@ -40,4 +43,20 @@ namespace Spicy
 #define SPC_WARN(...)	Spicy::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define SPC_FATAL(...)	Spicy::Log::GetClientLogger()->critical(__VA_ARGS__)
 
+#else
+// FOR DISTRIBUTION CONFIGURATION
+	#define SPC_CORE_ERROR(...)	
+	#define SPC_CORE_INFO(...)	
+	#define SPC_CORE_TRACE(...) 
+	#define SPC_CORE_WARN(...)	
+	#define SPC_CORE_FATAL(...) 
 
+	// Client Log Macros
+
+	#define SPC_ERROR(...)	
+	#define SPC_INFO(...)	
+	#define SPC_TRACE(...)	
+	#define SPC_WARN(...)	
+	#define SPC_FATAL(...)	
+
+#endif
