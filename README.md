@@ -5,4 +5,4 @@ Learning to make a new Game Engine.
 ---
 ### Libraries used
 * Github Repos:
-  1. [Gabime/spdlog](https://github.com/gabime/spdlog)
+  - [Gabime/spdlog](https://github.com/gabime/spdlog)
