@@ -15,8 +15,10 @@
     <ClInclude Include="src\Spicy\Application.h" />
     <ClInclude Include="src\Spicy\Core.h" />
     <ClInclude Include="src\Spicy\EntryPoint.h" />
+    <ClInclude Include="src\Spicy\Log.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Spicy\Log.cpp" />
     <ClCompile Include="src\Spicy\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -68,6 +70,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SPC_PLATFORM_WINDOWS;SPC_BUILD_DLL;WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Spicy\vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,6 +85,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SPC_PLATFORM_WINDOWS;SPC_BUILD_DLL;WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Spicy\vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
