@@ -26,8 +26,11 @@ project "Spicy"
     
     includedirs
     {
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{prj.name}/src"
     }
+    pchheader "spc_pch.h"
+    pchsource "Spicy/src/spc_pch.cpp"
 
     filter "system:windows"
         cppdialect "C++17"

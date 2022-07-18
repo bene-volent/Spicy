@@ -4,6 +4,9 @@
     <Filter Include="Spicy">
       <UniqueIdentifier>{4D281C0E-B93C-44BF-82BE-E71EEE9140F0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Spicy\Events">
+      <UniqueIdentifier>{91DB21BB-7D3E-B15F-26C4-E91512067DE2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Spicy.h" />
@@ -16,9 +19,22 @@
     <ClInclude Include="src\Spicy\EntryPoint.h">
       <Filter>Spicy</Filter>
     </ClInclude>
+    <ClInclude Include="src\Spicy\Events\ApplicationEvent.h">
+      <Filter>Spicy\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spicy\Events\Event.h">
+      <Filter>Spicy\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spicy\Events\KeyEvent.h">
+      <Filter>Spicy\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spicy\Events\MouseEvent.h">
+      <Filter>Spicy\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Spicy\Log.h">
       <Filter>Spicy</Filter>
     </ClInclude>
+    <ClInclude Include="src\spc_pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Spicy\Application.cpp">
@@ -27,5 +43,6 @@
     <ClCompile Include="src\Spicy\Log.cpp">
       <Filter>Spicy</Filter>
     </ClCompile>
+    <ClCompile Include="src\spc_pch.cpp" />
   </ItemGroup>
 </Project>

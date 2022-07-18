@@ -8,8 +8,6 @@ int main(int args, char** argc)
 {
 
 	Spicy::Log::Init();
-	SPC_CORE_WARN("Hello Var={0}", 1);
-	SPC_INFO("Client Logger Initialized");
 
 	auto app = Spicy::CreateApplication();
 

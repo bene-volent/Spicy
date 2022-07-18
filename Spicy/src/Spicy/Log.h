@@ -1,10 +1,13 @@
 #pragma once
 
-#include <memory>
+#ifndef SPC_LOG_H_
+#define SPC_LOG_H_
+
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Spicy
 {
@@ -59,4 +62,5 @@ namespace Spicy
 	#define SPC_WARN(...)	
 	#define SPC_FATAL(...)	
 
+#endif
 #endif

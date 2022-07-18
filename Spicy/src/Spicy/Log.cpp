@@ -1,3 +1,5 @@
+#include "spc_pch.h"
+
 #include "Log.h"
 
 namespace Spicy {
