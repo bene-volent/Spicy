@@ -4,4 +4,4 @@ Learning to make a new Game Engine.
 * [The Cherno : Hazel](https://thecherno.com/engine)
 ---
 ### Libraries used
-* [gabime/spdlog](https://github.com/gabime/spdlog)
+* Github Repo : [Gabime/spdlog](https://github.com/gabime/spdlog)
