@@ -4,6 +4,7 @@
 #include "Spicy/Events/KeyEvent.h"
 #include "Spicy/Events/MouseEvent.h"
 #include "Spicy/Events/ApplicationEvent.h"
+#include "glad/glad.h"
 
 namespace Spicy
 {
@@ -42,6 +43,8 @@ namespace Spicy
 
 		m_Window = glfwCreateWindow(m_Data.Width, m_Data.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		SPC_CORE_ASSERT(status, "Failed to initialize Glad!");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

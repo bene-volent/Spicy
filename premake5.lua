@@ -56,7 +56,8 @@ project "Spicy"
         defines
         {
             "SPC_PLATFORM_WINDOWS",
-            "SPC_BUILD_DLL"
+            "SPC_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands
