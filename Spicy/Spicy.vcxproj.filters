@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Spicy">
       <UniqueIdentifier>{4D281C0E-B93C-44BF-82BE-E71EEE9140F0}</UniqueIdentifier>
     </Filter>
@@ -9,6 +12,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\WindowsWindow.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
     <ClInclude Include="src\Spicy.h" />
     <ClInclude Include="src\Spicy\Application.h">
       <Filter>Spicy</Filter>
@@ -31,13 +37,31 @@
     <ClInclude Include="src\Spicy\Events\MouseEvent.h">
       <Filter>Spicy\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Spicy\Layer.h">
+      <Filter>Spicy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spicy\LayerStack.h">
+      <Filter>Spicy</Filter>
+    </ClInclude>
     <ClInclude Include="src\Spicy\Log.h">
+      <Filter>Spicy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spicy\Window.h">
       <Filter>Spicy</Filter>
     </ClInclude>
     <ClInclude Include="src\spc_pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\WindowsWindow.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
     <ClCompile Include="src\Spicy\Application.cpp">
+      <Filter>Spicy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Spicy\Layer.cpp">
+      <Filter>Spicy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Spicy\LayerStack.cpp">
       <Filter>Spicy</Filter>
     </ClCompile>
     <ClCompile Include="src\Spicy\Log.cpp">

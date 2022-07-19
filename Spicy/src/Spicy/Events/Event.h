@@ -49,6 +49,7 @@ namespace Spicy {
 		virtual int GetCategoryFlags() const = 0;
 		virtual std::string ToString() const { return GetName(); }
 		
+		bool Handled() { return m_Handled; }
 
 		inline bool IsInCategory(EventCategory cat)
 		{

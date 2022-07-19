@@ -10,6 +10,12 @@ workspace "Spicy"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Spicy/vendor/GLFW/include"
+IncludeDir["Glad"] = "Spicy/vendor/Glad/include"
+include "Spicy/vendor/GLFW"
+include "Spicy/vendor/Glad"
+
 project "Spicy"
     location "Spicy"
     kind "SharedLib"
@@ -27,8 +33,18 @@ project "Spicy"
     includedirs
     {
         "%{prj.name}/vendor/spdlog/include",
-        "%{prj.name}/src"
+        "%{prj.name}/src",
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
+
+    links
+    {
+        "GLFW",
+        "Glad",
+        "opengl32.lib"
+    }
+
     pchheader "spc_pch.h"
     pchsource "Spicy/src/spc_pch.cpp"
 
@@ -48,16 +64,20 @@ project "Spicy"
             ("{COPY} %{cfg.buildtarget.relpath}  ../bin/" ..outputdir.. "/Sandbox")
         }
     
+
     filter "configurations:Debug"
-        defines "SPC_DEBUG"
+        defines {"SPC_DEBUG","SPC_ENABLE_ASSERTS"}
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "SPC_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
-        defines "SPC_Dist"
+        defines "SPC_DIST"
+        buildoptions "/MD"
         optimize "On"
             
 project "Sandbox"
@@ -98,13 +118,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "SPC_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "SPC_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
-        defines "SPC_Dist"
+        defines "SPC_DIST"
+        buildoptions "/MD"
         optimize "On"
-            
