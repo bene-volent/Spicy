@@ -1,3 +1,6 @@
 [submodule "Spicy/vendor/spdlog"]
 	path = Spicy/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Spicy/vendor/GLFW"]
+	path = Spicy/vendor/GLFW
+	url = https://github.com/glfw/glfw
